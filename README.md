@@ -1,32 +1,69 @@
-# wix-payglocal
-- **This repository holds integration code for wix to be embedded in the merchant website.**
-- **This will also guide where to place the respective files in hierarchy.**
+# Wix-PayGlocal Integration
 
-## Installation
- 1. Goto wix dashboard and edit website.
- 2. Move to Public & Backend folder from the left index panel.
- 3. Create a folder as `Payglocal` under payment-provider in Service Plugins.
-        
-        Same folder structure is followed in repository as well.
- 4.  Create respective files with the same name convention as in repository.
- 5. Create configuration files `payglocal-wrapper.js, payglocal-constants.js` under backend folder.
- 6. Modify `http-functions.js` file as per the repository.
- 7. Replace constant values for `ACCOUNT_NAME` and `WEBSITE_NAME` as per merchant's account and website values.
- 8. Once `Payglocal` folder is created, `payglocal-config.js` and  `payglocal.js` files will be generated automatically.
- 9. Update code in `payglocal-config.js` and `payglocal.js` as per the repository.
- 10. When all changes are in place, publish the website.
- 11. Once website is published `Payglocal` will be visible as a plugin on `Accept Payments Page`.
+This repository contains the integration code for embedding PayGlocal as a payment provider within Wix websites. It also includes a guide on file placement and directory structure.
+
+## Installation Guide
+
+Follow these steps to integrate payglocal into your Wix website:
+
+1. **Access Wix Dashboard**
+   - Log in to your Wix account and navigate to the website editor.
+
+2. **Navigate to Public & Backend Folders**
+   - From the left-hand panel, locate and open the `Public` and `Backend` folders.
+
+3. **Create the Required Folder Structure**
+   - Inside the `Service Plugins` directory, create a folder named `Payglocal` under the `payment-provider` section.
+   - This repository follows the same folder structure for easy reference.
+
+4. **Create Required Files**
+   - Add the files following the same naming convention used in this repository.
+
+5. **Add Configuration Files**
+   - In the `Backend` folder, create the following configuration files:
+     - `payglocal-wrapper.js`
+     - `payglocal-constants.js`
+
+6. **Modify Backend Code**
+   - Update the `http-functions.js` file according to the changes specified in this repository.
+
+7. **Set Merchant-Specific Values**
+   - Replace the placeholder values for `ACCOUNT_NAME` and `WEBSITE_NAME` with the merchant’s actual account and website details.
+
+8. **Automatic File Generation**
+   - After creating the `payglocal` folder, the following files will be auto-generated:
+     - `payglocal.js`
+     - `payglocal-config.js`
 
 
- ## Activate For Payment Processing
+9. **Update Configuration**
+   - Make necessary updates to `payglocal-config.js` and `payglocal.js` in line with the repository instructions.
 
- 1. When the website is published and `PayGlocal` is visible as a payment plugin.
- 2. Enter the credentials `MerchantId` and `Api_Key` in the respective fields, click `Connect`.
- 
- Once the connection is successful, we are ready to process payments via `PayGlocal`.
+10. **Publish the Website**
+    - Once all the changes are made, publish the website to make payglocal live.
 
- ## Verification
+11. **Verify Plugin on Payment Page**
+    - After publishing, payglocal will appear as a plugin under the "Accept Payments" section.
 
- - On checkout page `PayGlocal` will be visible as a payment method.
- - Selecting this payment mode will redirect user to the page where payment can be made.
- - When the payment is successful, an entry is created in `Orders Tab` with the details.
+## Activating PayGlocal for Payment Processing
+
+To activate payglocal as a payment method:
+
+1. **Locate payglocal Plugin**
+   - Once the website is published, ensure `PayGlocal` is visible as a payment plugin.
+
+2. **Input Credentials**
+   - Enter the provided `MERCHANT_ID` and `API_KEY` in the relevant fields and click `Connect`.
+
+Upon successful connection, payglocal will be ready to process payments.
+
+## Payment Method Verification
+
+1. **Checkout Process**
+   - On the checkout page, payglocal should appear as a selectable payment method.
+
+2. **Redirection for Payment**
+   - Upon selecting payglocal, the user will be redirected to the payment page to complete the transaction.
+
+3. **Order Creation**
+   - After a successful payment, an order entry will be created in the "Orders" tab with all relevant transaction details.
