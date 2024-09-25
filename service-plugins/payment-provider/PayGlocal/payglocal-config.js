@@ -7,12 +7,12 @@ export function getConfig() {
                 "billingAddressMandatoryFields": ["FIRST_NAME", "LAST_NAME", "CITY", "ZIPCODE", "STATE"],
                 "logos": {
                     "white": {
-                        svg: "https://static.payglocal.in/icons/general/PayglocalShort.png",
+                        svg: "https://static.payglocal.in/images/processor/payglocal-short.v1.svg",
                         png: "https://static.payglocal.in/icons/general/PayglocalShort.png"
 
                     },
                     "colored": {
-                        svg: "https://static.payglocal.in/icons/general/PayglocalShort.png",
+                        svg: "https://static.payglocal.in/images/processor/payglocal-short.v1.svg",
                         png: "https://static.payglocal.in/icons/general/PayglocalShort.png"
                     }
                 }
