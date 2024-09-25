@@ -3,7 +3,7 @@ export function getConfig() {
         "title": "PayGlocal",
         "paymentMethods": [{
             "hostedPage": {
-                "title": "PayGlocal",
+                "title": "International Credit/Debit Card",
                 "billingAddressMandatoryFields": ["FIRST_NAME", "LAST_NAME", "CITY", "ZIPCODE", "STATE"],
                 "logos": {
                     "white": {
