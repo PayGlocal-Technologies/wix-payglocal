@@ -46,7 +46,7 @@ export async function createCheckoutSession(transactionRequest) {
     if (!transactionRequest) return errorObject;
     try {
         let invoiceAmount = parseInt(transactionRequest.order.description.totalAmount) / 100;
-        let orderUpdateUrl = `${ACCOUNT_NAME}/${WEBSITE_NAME}/_functions/updateTransaction`
+        let orderUpdateUrl = `${ACCOUNT_NAME.endsWith('/') ? ACCOUNT_NAME : ACCOUNT_NAME + '/'}${WEBSITE_NAME ? WEBSITE_NAME + '/' : ''}_functions/updateTransaction`;
 
         let body = JSON.stringify({
             totalAmount: invoiceAmount,
