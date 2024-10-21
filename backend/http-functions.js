@@ -1,5 +1,8 @@
 import wixPaymentProviderBackend from 'wix-payment-provider-backend';
 import { ok, badRequest } from 'wix-http-functions';
+import { compactVerify, importSPKI } from 'jose';
+import { enc } from 'crypto-js';
+import { PUBLIC_KEY } from 'backend/payglocal-constants.js';
 
 // This endpoint is used to update the status of a checkout session transaction.
 export async function get_updateTransaction(request) {
