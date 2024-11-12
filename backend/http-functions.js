@@ -103,3 +103,33 @@ async function submitRefundUpdate(wixTransactionId, pluginRefundId, wixRefundId,
         return error
     }
 }
+
+function parseJwt(token) {
+    if (token) {
+        let base64Url = token?.split('.')[1];
+        if (!base64Url) return null;
+        base64Url = base64Url?.replace(/-/g, '+')?.replace(/_/g, '/');
+
+        const base64 = enc.Base64.parse(base64Url);
+        const jsonPayload = enc.Utf8.stringify(base64);
+        console
+        return JSON.parse(jsonPayload);
+
+    }
+}
+
+const validateJweSignature = async (token, publicKey, skipVerify) => {
+    const res = {};
+    try {
+        if (skipVerify) {
+            return { data: parseJwt(token) };
+        }
+        const cKey = await importSPKI(publicKey, 'RS256');
+        await compactVerify(token, cKey);
+        return { data: parseJwt(token) };
+    } catch (e) {
+        res.error = e;
+        console.log("Error is", e)
+        return res;
+    }
+};
