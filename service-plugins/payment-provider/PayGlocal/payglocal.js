@@ -80,7 +80,7 @@ export async function createRefund(refundRequest) {
     if (!refundRequest) return errorObject;
     try {
         let invoiceAmount = parseInt(refundRequest.refundAmount) / 100;
-        let callbackUrl = `${ACCOUNT_NAME}/${WEBSITE_NAME}/_functions/updateRefund`
+        let callbackUrl = `${ACCOUNT_NAME.endsWith('/') ? ACCOUNT_NAME : ACCOUNT_NAME + '/'}${WEBSITE_NAME ? WEBSITE_NAME + '/' : ''}_functions/updateRefund`
 
         const body = JSON.stringify({
             refundAmount: invoiceAmount,
