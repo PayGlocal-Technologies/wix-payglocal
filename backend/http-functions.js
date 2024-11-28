@@ -13,6 +13,7 @@ export async function get_updateTransaction(request) {
     };
     let token = request.query['xglToken'];
     const res = await validateJweSignature(token, PUBLIC_KEY);
+    console.log("Decrypted jws token is ", res)
     
     let txn_no = res.data.gid;
     let status = res.data.status;
@@ -45,6 +46,7 @@ export async function post_updateRefund(request) {
     let token = request.query['xglToken'];
     console.log("token is ", token)
     const res = await validateJweSignature(token, PUBLIC_KEY);
+    console.log("Decrypted jws token is ", res)
 
     const status = res.data.status;
     const amount = res.data.amount;
@@ -112,7 +114,6 @@ function parseJwt(token) {
 
         const base64 = enc.Base64.parse(base64Url);
         const jsonPayload = enc.Utf8.stringify(base64);
-        console
         return JSON.parse(jsonPayload);
 
     }

@@ -1,11 +1,10 @@
 export const ACCOUNT_NAME = '<Add merchant account name>';  // eg: https://abc.wixsite.com
 export const WEBSITE_NAME = '<Add merchant website name>';  // eg: my-site-2
 export const PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxO+O52a1eAkbYatqpPAk
-vhTz5VAdNloWhbmAmwPPo8660VKxU+yOCbwZSU8NqwVubHMgnxdycgJw+zGslXgz
-zHPpmA5evOY2AVjpcE9avKfp523M5gxOaAnQCxat6KxORIJWLSF84EUtrzLIxgle
-bvDyhfoHMGVSYiP89UQPTR+uu6irFRkdu2zFDPOx2/4XdtyAbJlWdj4Fes0v3CcA
-/jDO9EmwVEiySCuagLWnrvHvCV0mCDN167JSVjeeKZy4Q36WyF0VqytxmW+mXn+m
-IfcLlj5vXSXp81pI1Iyg86KZtW3A6dP8QuRlYwHJU7Z+m7AeIHtC+ol0/eBPYPwk
-PQIDAQAB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwhl4wmBzV1IJGtPMkGuKh
+W0S/ZlE7tytzhLrF33K8dE77Y/cfFiNkfungu0nrNzV1TVBgjimQp1L+9LHjr0HkBk
+/e/uf2aQqXoFklAwV1moQBrAmcJup2V29aZh7uzR90cHVcD5HotEkgKhDn2XPFaV+
+Rh7tznLfPjjLzvhprjP44m3DPMH/fm1cBk8vLhV0AnPwXJrQ3pXiVk6y9XHaQCRIOF
+9O2bijHY04dx06bU206gCokq3PJXSxPIn8IUAUPmAhWUuhZ2+YCwYyO4SbHTRuK/5
+tWhzWy61z8yV6LqNgHJ6gJX5AFnZE8huFmjf7EWo32R6lL2OPRhWn7Jsu4QIDAQAB
 -----END PUBLIC KEY-----`;
