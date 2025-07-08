@@ -29,8 +29,8 @@ Follow these steps to integrate payglocal into your Wix website:
 
 7. **Install NPM Packages**
    - Navigate to Packages and Apps and install below libraries via npm.
-      - `jose`
-      - `crypto-js`
+      - `jose`  version: 4.2.0
+      - `crypto-js`  version: 4.2.0
 
 8. **Set Merchant-Specific Values**
    - Replace the placeholder values for `ACCOUNT_NAME` and `WEBSITE_NAME` with the merchant’s actual account and website details.
